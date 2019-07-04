@@ -32,23 +32,49 @@ layui.use(['form', 'laydate', 'table'], function () {
         , cols: [
             [
                 {
-                    field: 'id', width: 80, title: '序号', sort: true, templet: function (d) {
+                    field: 'id', width: 80, title: '序号', sort: true,fixed: 'left', templet: function (d) {
                         return '<span style="color: #c00;">' + d.LAY_INDEX + '</span>'
                     }
                 }
-                , {field: 'title', title: '标题名', width: 200}
-                , {field: 'process_name', title: '进程名'}
-                , {field: 'user_name', title: '用户'}
-                , {field: 'start_time', title: '开始时间'}
-                , {field: 'end_time', title: '结束时间'} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
-                , {field: 'during_time', title: '持续时间', sort: true}
-                , {field: 'idle_time', title: '静默时间', sort: true}
+                , {field: 'title', title: '标题名', width: 150,fixed: 'left'}
+                , {field: 'process_name', title: '进程名',fixed: 'left'}
+                , {field: 'user_name', title: '用户', width: 100,}
+                , {field: 'start_time', title: '开始时间', width: 100,}
+                , {field: 'end_time', title: '结束时间', width: 100,} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                , {field: 'during_time', title: '持续时间',width: 100, sort: true}
+                , {field: 'idle_time', title: '静默时间',width: 100, sort: true,fixed: 'right'}
             ]]
         , page: true
         , done: function () {
             tdTitle();
         }
     });
+
+    var tableInsUser = table.render({
+        elem: '#dt-user'
+        , limit: 20
+        , method: 'post'
+        , url: '/ajax/onLineUserList'
+        , contentType: 'application/json; charset=utf-8'
+        , height: 'full-300'
+        , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+        , cols: [
+            [
+                {
+                    field: 'id', width: 80, title: '序号', sort: true, templet: function (d) {
+                        return '<span style="color: #c00;">' + d.LAY_INDEX + '</span>'
+                    }
+                }
+                , {field: 'user_name', title: '用户名'}
+                , {field: 'status', title: '状态'}
+                , {field: 'lastest_msg_time',width: 200, title: '最近活动时间'}
+            ]]
+        , page: true
+        , done: function () {
+            tdTitle();
+        }
+    });
+
     //常规用法
     var myChart = echarts.init(document.getElementById('myChart'));
 
@@ -215,6 +241,8 @@ layui.use(['form', 'laydate', 'table'], function () {
                 curr: 1 //重新从第 1 页开始
             }
         });
+
+        tableInsUser.reload();
     }
 
     //根据窗口的大小变动图表 --- 重点

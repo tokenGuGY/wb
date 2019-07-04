@@ -184,4 +184,9 @@ public class IndexServiceImpl implements IndexService{
     public List<PageData> listUser(PageData pageData) {
         return indexDao.listUser(pageData);
     }
+
+    @Override
+    public List<PageData> listOnLineUser(PageData pageData) {
+        return  indexDao.listOnLine(pageData);
+    }
 }

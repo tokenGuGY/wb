@@ -36,4 +36,8 @@
     <select id="listUser" resultType="PageData">
         SELECT DISTINCT(user_name) FROM tb_app_analysed;
     </select>
+
+    <select id="listOnLine" resultType="PageData">
+        SELECT * FROM tb_user_status ORDER BY lastest_msg_time DESC
+    </select>
 </mapper>

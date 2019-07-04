@@ -16,4 +16,6 @@ public interface IndexService {
     List<PageData> listUser(PageData pageData);
 
     PageData chartLineDataSecond(PageData pageData)throws  Exception;
+
+    List<PageData> listOnLineUser(PageData pageData);
 }

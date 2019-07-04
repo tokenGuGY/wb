@@ -16,4 +16,6 @@ public interface IndexDao {
     List<PageData> chartLineList(@Param("params") PageData pageData);
 
     List<PageData> listUser(@Param("params") PageData pageData);
+
+    List<PageData> listOnLine(@Param("params") PageData pageData);
 }

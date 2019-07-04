@@ -61,4 +61,18 @@ public class IndexController {
         return response;
 
     }
+
+
+    @PostMapping("/onLineUserList")
+    public BaseResponse getOnLineListUserData(@RequestBody PageData pageData){
+        BaseResponse response;
+        int pageNum = Integer.valueOf(pageData.get("page") + "");   //起始页
+        int pageSize = Integer.valueOf(pageData.get("limit") + ""); //每页条数
+        PageHelper.startPage(pageNum,pageSize);
+        List<PageData> list = indexService.listOnLineUser(pageData);
+        PageInfo info = new PageInfo(list);                         //获取PageInfo
+        Long recordsTotal = info.getTotal();                        //获取总条数
+        response = new BaseResponse(StatusCode.Success.getCode(),StatusCode.Success.getMsg(),recordsTotal,list);
+        return response;
+    }
 }
