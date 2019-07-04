@@ -1,0 +1,270 @@
+2019-06-27 08:58:53,006 [http-nio-8080-exec-4] ==>  Preparing: SELECT DISTINCT(user_name) FROM tb_app_analysed; 
+2019-06-27 08:58:53,109 [http-nio-8080-exec-4] ==> Parameters: 
+2019-06-27 08:58:53,123 [http-nio-8080-exec-4] <==      Total: 2
+2019-06-27 08:58:53,214 [http-nio-8080-exec-7] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 08:58:53,227 [http-nio-8080-exec-10] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 08:58:53,230 [http-nio-8080-exec-7] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 08:58:53,232 [http-nio-8080-exec-7] <==      Total: 0
+2019-06-27 08:58:53,257 [http-nio-8080-exec-10] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 08:58:53,258 [http-nio-8080-exec-10] <==      Total: 0
+2019-06-27 08:58:53,279 [http-nio-8080-exec-8] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 08:58:53,279 [http-nio-8080-exec-6] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 08:58:53,280 [http-nio-8080-exec-8] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 08:58:53,281 [http-nio-8080-exec-8] <==      Total: 1
+2019-06-27 08:58:53,282 [http-nio-8080-exec-6] ==> Parameters: null, null
+2019-06-27 08:58:53,283 [http-nio-8080-exec-6] <==      Total: 1
+2019-06-27 08:59:24,903 [http-nio-8080-exec-3] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 08:59:24,903 [http-nio-8080-exec-2] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 08:59:24,905 [http-nio-8080-exec-5] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 08:59:24,905 [http-nio-8080-exec-2] ==> Parameters: 2019-06-26(String), rzxiao(String)
+2019-06-27 08:59:24,905 [http-nio-8080-exec-3] ==> Parameters: 2019-06-26(String), rzxiao(String)
+2019-06-27 08:59:24,906 [http-nio-8080-exec-5] ==> Parameters: rzxiao(String), 2019-06-26(String)
+2019-06-27 08:59:24,906 [http-nio-8080-exec-3] <==      Total: 0
+2019-06-27 08:59:24,906 [http-nio-8080-exec-2] <==      Total: 0
+2019-06-27 08:59:24,907 [http-nio-8080-exec-5] <==      Total: 1
+2019-06-27 09:00:56,583 [http-nio-8080-exec-8] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:00:56,585 [http-nio-8080-exec-8] ==> Parameters: 2019-06-26(String), gugy(String)
+2019-06-27 09:00:56,585 [http-nio-8080-exec-3] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:00:56,585 [http-nio-8080-exec-3] ==> Parameters: 2019-06-26(String), gugy(String)
+2019-06-27 09:00:56,586 [http-nio-8080-exec-8] <==      Total: 0
+2019-06-27 09:00:56,587 [http-nio-8080-exec-3] <==      Total: 0
+2019-06-27 09:00:56,590 [http-nio-8080-exec-2] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:00:56,590 [http-nio-8080-exec-2] ==> Parameters: gugy(String), 2019-06-26(String)
+2019-06-27 09:00:56,592 [http-nio-8080-exec-2] <==      Total: 1
+2019-06-27 09:01:03,028 [http-nio-8080-exec-5] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:01:03,029 [http-nio-8080-exec-5] ==> Parameters: 2019-06-19(String), gugy(String)
+2019-06-27 09:01:03,029 [http-nio-8080-exec-4] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:01:03,029 [http-nio-8080-exec-4] ==> Parameters: 2019-06-19(String), gugy(String)
+2019-06-27 09:01:03,030 [http-nio-8080-exec-5] <==      Total: 0
+2019-06-27 09:01:03,031 [http-nio-8080-exec-4] <==      Total: 0
+2019-06-27 09:01:03,035 [http-nio-8080-exec-4] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:01:03,036 [http-nio-8080-exec-4] ==> Parameters: gugy(String), 2019-06-19(String)
+2019-06-27 09:01:03,037 [http-nio-8080-exec-4] <==      Total: 1
+2019-06-27 09:01:06,821 [http-nio-8080-exec-7] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:01:06,821 [http-nio-8080-exec-7] ==> Parameters: 2019-06-15(String), gugy(String)
+2019-06-27 09:01:06,821 [http-nio-8080-exec-10] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:01:06,824 [http-nio-8080-exec-7] <==      Total: 1
+2019-06-27 09:01:06,824 [http-nio-8080-exec-10] ==> Parameters: 2019-06-15(String), gugy(String)
+2019-06-27 09:01:06,827 [http-nio-8080-exec-9] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:01:06,828 [http-nio-8080-exec-9] ==> Parameters: gugy(String), 2019-06-15(String)
+2019-06-27 09:01:06,829 [http-nio-8080-exec-9] <==      Total: 1
+2019-06-27 09:01:06,832 [http-nio-8080-exec-9] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? LIMIT ? 
+2019-06-27 09:01:06,834 [http-nio-8080-exec-9] ==> Parameters: gugy(String), 2019-06-15(String), 20(Integer)
+2019-06-27 09:01:06,836 [http-nio-8080-exec-10] <==      Total: 50
+2019-06-27 09:01:06,838 [http-nio-8080-exec-9] <==      Total: 20
+2019-06-27 09:01:38,128 [http-nio-8080-exec-5] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:01:38,128 [http-nio-8080-exec-5] ==> Parameters: null, null
+2019-06-27 09:01:38,129 [http-nio-8080-exec-5] <==      Total: 1
+2019-06-27 09:01:38,149 [http-nio-8080-exec-4] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:01:38,150 [http-nio-8080-exec-4] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:01:38,150 [http-nio-8080-exec-7] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:01:38,150 [http-nio-8080-exec-7] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:01:38,151 [http-nio-8080-exec-4] <==      Total: 0
+2019-06-27 09:01:38,151 [http-nio-8080-exec-7] <==      Total: 0
+2019-06-27 09:01:38,163 [http-nio-8080-exec-10] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:01:38,164 [http-nio-8080-exec-10] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 09:01:38,165 [http-nio-8080-exec-10] <==      Total: 1
+2019-06-27 09:58:40,370 [http-nio-8080-exec-2] ==>  Preparing: SELECT DISTINCT(user_name) FROM tb_app_analysed; 
+2019-06-27 09:58:40,445 [http-nio-8080-exec-2] ==> Parameters: 
+2019-06-27 09:58:40,477 [http-nio-8080-exec-2] <==      Total: 2
+2019-06-27 09:58:40,563 [http-nio-8080-exec-5] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:58:40,563 [http-nio-8080-exec-4] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:58:40,574 [http-nio-8080-exec-5] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:58:40,576 [http-nio-8080-exec-5] <==      Total: 0
+2019-06-27 09:58:40,576 [http-nio-8080-exec-4] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:58:40,577 [http-nio-8080-exec-4] <==      Total: 0
+2019-06-27 09:58:40,621 [http-nio-8080-exec-6] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:58:40,621 [http-nio-8080-exec-3] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:58:40,622 [http-nio-8080-exec-6] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 09:58:40,624 [http-nio-8080-exec-6] <==      Total: 1
+2019-06-27 09:58:40,625 [http-nio-8080-exec-3] ==> Parameters: null, null
+2019-06-27 09:58:40,630 [http-nio-8080-exec-3] <==      Total: 1
+2019-06-27 09:59:26,901 [http-nio-8080-exec-2] ==>  Preparing: SELECT DISTINCT(user_name) FROM tb_app_analysed; 
+2019-06-27 09:59:26,967 [http-nio-8080-exec-2] ==> Parameters: 
+2019-06-27 09:59:26,988 [http-nio-8080-exec-2] <==      Total: 2
+2019-06-27 09:59:27,073 [http-nio-8080-exec-4] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:59:27,073 [http-nio-8080-exec-5] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:59:27,083 [http-nio-8080-exec-5] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:27,083 [http-nio-8080-exec-4] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:27,084 [http-nio-8080-exec-5] <==      Total: 0
+2019-06-27 09:59:27,084 [http-nio-8080-exec-4] <==      Total: 0
+2019-06-27 09:59:27,114 [http-nio-8080-exec-3] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:27,115 [http-nio-8080-exec-6] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:27,116 [http-nio-8080-exec-6] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 09:59:27,118 [http-nio-8080-exec-6] <==      Total: 1
+2019-06-27 09:59:27,118 [http-nio-8080-exec-3] ==> Parameters: null, null
+2019-06-27 09:59:27,119 [http-nio-8080-exec-3] <==      Total: 1
+2019-06-27 09:59:31,574 [http-nio-8080-exec-7] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:59:31,574 [http-nio-8080-exec-7] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 09:59:31,574 [http-nio-8080-exec-8] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:59:31,575 [http-nio-8080-exec-8] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 09:59:31,576 [http-nio-8080-exec-7] <==      Total: 3
+2019-06-27 09:59:31,582 [http-nio-8080-exec-7] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:31,582 [http-nio-8080-exec-7] ==> Parameters: rzxiao(String), 2019-06-15(String)
+2019-06-27 09:59:31,583 [http-nio-8080-exec-7] <==      Total: 1
+2019-06-27 09:59:31,584 [http-nio-8080-exec-7] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? LIMIT ? 
+2019-06-27 09:59:31,586 [http-nio-8080-exec-7] ==> Parameters: rzxiao(String), 2019-06-15(String), 20(Integer)
+2019-06-27 09:59:31,590 [http-nio-8080-exec-7] <==      Total: 20
+2019-06-27 09:59:31,601 [http-nio-8080-exec-8] <==      Total: 199
+2019-06-27 09:59:49,997 [http-nio-8080-exec-1] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:49,998 [http-nio-8080-exec-1] ==> Parameters: null, null
+2019-06-27 09:59:50,000 [http-nio-8080-exec-1] <==      Total: 1
+2019-06-27 09:59:50,028 [http-nio-8080-exec-4] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:59:50,029 [http-nio-8080-exec-4] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:50,030 [http-nio-8080-exec-4] <==      Total: 0
+2019-06-27 09:59:50,030 [http-nio-8080-exec-5] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:59:50,031 [http-nio-8080-exec-5] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:50,033 [http-nio-8080-exec-5] <==      Total: 0
+2019-06-27 09:59:50,039 [http-nio-8080-exec-6] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:50,040 [http-nio-8080-exec-6] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 09:59:50,041 [http-nio-8080-exec-6] <==      Total: 1
+2019-06-27 09:59:55,807 [http-nio-8080-exec-3] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:59:55,807 [http-nio-8080-exec-3] ==> Parameters: 2019-06-22(String), rzxiao(String)
+2019-06-27 09:59:55,808 [http-nio-8080-exec-9] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:59:55,808 [http-nio-8080-exec-9] ==> Parameters: 2019-06-22(String), rzxiao(String)
+2019-06-27 09:59:55,809 [http-nio-8080-exec-3] <==      Total: 0
+2019-06-27 09:59:55,810 [http-nio-8080-exec-9] <==      Total: 0
+2019-06-27 09:59:55,815 [http-nio-8080-exec-7] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:55,816 [http-nio-8080-exec-7] ==> Parameters: rzxiao(String), 2019-06-22(String)
+2019-06-27 09:59:55,818 [http-nio-8080-exec-7] <==      Total: 1
+2019-06-27 09:59:58,325 [http-nio-8080-exec-8] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:58,325 [http-nio-8080-exec-8] ==> Parameters: null, null
+2019-06-27 09:59:58,326 [http-nio-8080-exec-8] <==      Total: 1
+2019-06-27 09:59:58,344 [http-nio-8080-exec-10] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 09:59:58,344 [http-nio-8080-exec-10] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:58,345 [http-nio-8080-exec-1] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 09:59:58,345 [http-nio-8080-exec-1] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 09:59:58,345 [http-nio-8080-exec-10] <==      Total: 0
+2019-06-27 09:59:58,347 [http-nio-8080-exec-1] <==      Total: 0
+2019-06-27 09:59:58,351 [http-nio-8080-exec-4] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 09:59:58,352 [http-nio-8080-exec-4] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 09:59:58,353 [http-nio-8080-exec-4] <==      Total: 1
+2019-06-27 10:00:01,342 [http-nio-8080-exec-5] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:00:01,343 [http-nio-8080-exec-5] ==> Parameters: null, null
+2019-06-27 10:00:01,344 [http-nio-8080-exec-5] <==      Total: 1
+2019-06-27 10:00:01,357 [http-nio-8080-exec-2] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 10:00:01,358 [http-nio-8080-exec-2] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:00:01,358 [http-nio-8080-exec-6] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 10:00:01,359 [http-nio-8080-exec-2] <==      Total: 0
+2019-06-27 10:00:01,359 [http-nio-8080-exec-6] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:00:01,361 [http-nio-8080-exec-6] <==      Total: 0
+2019-06-27 10:00:01,363 [http-nio-8080-exec-2] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:00:01,363 [http-nio-8080-exec-2] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 10:00:01,365 [http-nio-8080-exec-2] <==      Total: 1
+2019-06-27 10:00:04,405 [http-nio-8080-exec-9] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:00:04,406 [http-nio-8080-exec-9] ==> Parameters: null, null
+2019-06-27 10:00:04,407 [http-nio-8080-exec-9] <==      Total: 1
+2019-06-27 10:00:04,414 [http-nio-8080-exec-7] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 10:00:04,415 [http-nio-8080-exec-7] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:00:04,415 [http-nio-8080-exec-8] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 10:00:04,416 [http-nio-8080-exec-8] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:00:04,416 [http-nio-8080-exec-7] <==      Total: 0
+2019-06-27 10:00:04,417 [http-nio-8080-exec-8] <==      Total: 0
+2019-06-27 10:00:04,424 [http-nio-8080-exec-10] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:00:04,424 [http-nio-8080-exec-10] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 10:00:04,425 [http-nio-8080-exec-10] <==      Total: 1
+2019-06-27 10:16:47,557 [http-nio-8080-exec-5] ==>  Preparing: SELECT DISTINCT(user_name) FROM tb_app_analysed; 
+2019-06-27 10:16:47,615 [http-nio-8080-exec-5] ==> Parameters: 
+2019-06-27 10:16:47,639 [http-nio-8080-exec-5] <==      Total: 2
+2019-06-27 10:16:47,714 [http-nio-8080-exec-7] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 10:16:47,715 [http-nio-8080-exec-8] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 10:16:47,722 [http-nio-8080-exec-8] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:16:47,722 [http-nio-8080-exec-7] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 10:16:47,723 [http-nio-8080-exec-7] <==      Total: 0
+2019-06-27 10:16:47,723 [http-nio-8080-exec-8] <==      Total: 0
+2019-06-27 10:16:47,742 [http-nio-8080-exec-2] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:16:47,742 [http-nio-8080-exec-10] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:16:47,743 [http-nio-8080-exec-10] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 10:16:47,743 [http-nio-8080-exec-2] ==> Parameters: null, null
+2019-06-27 10:16:47,745 [http-nio-8080-exec-10] <==      Total: 1
+2019-06-27 10:16:47,745 [http-nio-8080-exec-2] <==      Total: 1
+2019-06-27 10:16:55,646 [http-nio-8080-exec-9] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 10:16:55,646 [http-nio-8080-exec-1] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 10:16:55,647 [http-nio-8080-exec-1] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 10:16:55,647 [http-nio-8080-exec-9] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 10:16:55,649 [http-nio-8080-exec-1] <==      Total: 3
+2019-06-27 10:16:55,655 [http-nio-8080-exec-1] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 10:16:55,655 [http-nio-8080-exec-1] ==> Parameters: rzxiao(String), 2019-06-15(String)
+2019-06-27 10:16:55,656 [http-nio-8080-exec-1] <==      Total: 1
+2019-06-27 10:16:55,657 [http-nio-8080-exec-1] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? LIMIT ? 
+2019-06-27 10:16:55,659 [http-nio-8080-exec-1] ==> Parameters: rzxiao(String), 2019-06-15(String), 20(Integer)
+2019-06-27 10:16:55,663 [http-nio-8080-exec-1] <==      Total: 20
+2019-06-27 10:16:55,673 [http-nio-8080-exec-9] <==      Total: 199
+2019-06-27 17:02:28,743 [http-nio-8080-exec-6] ==>  Preparing: SELECT DISTINCT(user_name) FROM tb_app_analysed; 
+2019-06-27 17:02:28,808 [http-nio-8080-exec-6] ==> Parameters: 
+2019-06-27 17:02:28,825 [http-nio-8080-exec-6] <==      Total: 2
+2019-06-27 17:02:28,899 [http-nio-8080-exec-10] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 17:02:28,901 [http-nio-8080-exec-9] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 17:02:28,911 [http-nio-8080-exec-10] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 17:02:28,912 [http-nio-8080-exec-9] ==> Parameters: 2019-06-27(String), rzxiao(String)
+2019-06-27 17:02:28,913 [http-nio-8080-exec-10] <==      Total: 0
+2019-06-27 17:02:28,914 [http-nio-8080-exec-9] <==      Total: 0
+2019-06-27 17:02:28,942 [http-nio-8080-exec-5] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 17:02:28,942 [http-nio-8080-exec-8] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 17:02:28,943 [http-nio-8080-exec-8] ==> Parameters: rzxiao(String), 2019-06-27(String)
+2019-06-27 17:02:28,943 [http-nio-8080-exec-5] ==> Parameters: null, null
+2019-06-27 17:02:28,945 [http-nio-8080-exec-5] <==      Total: 1
+2019-06-27 17:02:28,945 [http-nio-8080-exec-8] <==      Total: 1
+2019-06-27 17:02:34,969 [http-nio-8080-exec-2] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 17:02:34,969 [http-nio-8080-exec-1] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 17:02:34,970 [http-nio-8080-exec-2] ==> Parameters: 2019-06-26(String), rzxiao(String)
+2019-06-27 17:02:34,971 [http-nio-8080-exec-1] ==> Parameters: 2019-06-26(String), rzxiao(String)
+2019-06-27 17:02:34,972 [http-nio-8080-exec-2] <==      Total: 0
+2019-06-27 17:02:34,972 [http-nio-8080-exec-1] <==      Total: 0
+2019-06-27 17:02:34,975 [http-nio-8080-exec-3] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 17:02:34,976 [http-nio-8080-exec-3] ==> Parameters: rzxiao(String), 2019-06-26(String)
+2019-06-27 17:02:34,978 [http-nio-8080-exec-3] <==      Total: 1
+2019-06-27 17:02:39,736 [http-nio-8080-exec-6] ==>  Preparing: SELECT process_name, SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number FROM tb_app_analysed WHERE DATE=? AND user_name =? GROUP BY process_name 
+2019-06-27 17:02:39,737 [http-nio-8080-exec-6] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 17:02:39,737 [http-nio-8080-exec-7] ==>  Preparing: select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec from tb_app_analysed t WHERE DATE=? AND user_name =? 
+2019-06-27 17:02:39,738 [http-nio-8080-exec-7] ==> Parameters: 2019-06-15(String), rzxiao(String)
+2019-06-27 17:02:39,739 [http-nio-8080-exec-6] <==      Total: 3
+2019-06-27 17:02:39,743 [http-nio-8080-exec-6] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? 
+2019-06-27 17:02:39,744 [http-nio-8080-exec-6] ==> Parameters: rzxiao(String), 2019-06-15(String)
+2019-06-27 17:02:39,745 [http-nio-8080-exec-6] <==      Total: 1
+2019-06-27 17:02:39,746 [http-nio-8080-exec-6] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? LIMIT ? 
+2019-06-27 17:02:39,748 [http-nio-8080-exec-6] ==> Parameters: rzxiao(String), 2019-06-15(String), 20(Integer)
+2019-06-27 17:02:39,752 [http-nio-8080-exec-6] <==      Total: 20
+2019-06-27 17:02:39,762 [http-nio-8080-exec-7] <==      Total: 199
+2019-06-27 17:02:47,294 [http-nio-8080-exec-10] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:02:47,297 [http-nio-8080-exec-10] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String)
+2019-06-27 17:02:47,299 [http-nio-8080-exec-10] <==      Total: 1
+2019-06-27 17:02:47,300 [http-nio-8080-exec-10] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:02:47,301 [http-nio-8080-exec-10] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String), 20(Integer)
+2019-06-27 17:02:47,304 [http-nio-8080-exec-10] <==      Total: 20
+2019-06-27 17:02:48,312 [http-nio-8080-exec-8] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:02:48,313 [http-nio-8080-exec-8] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String)
+2019-06-27 17:02:48,315 [http-nio-8080-exec-8] <==      Total: 1
+2019-06-27 17:02:48,316 [http-nio-8080-exec-8] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:02:48,318 [http-nio-8080-exec-8] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String), 20(Integer)
+2019-06-27 17:02:48,320 [http-nio-8080-exec-8] <==      Total: 20
+2019-06-27 17:02:49,400 [http-nio-8080-exec-5] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:02:49,400 [http-nio-8080-exec-5] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome1.exe(String)
+2019-06-27 17:02:49,402 [http-nio-8080-exec-5] <==      Total: 1
+2019-06-27 17:02:49,403 [http-nio-8080-exec-5] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:02:49,403 [http-nio-8080-exec-5] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome1.exe(String), 20(Integer)
+2019-06-27 17:02:49,406 [http-nio-8080-exec-5] <==      Total: 20
+2019-06-27 17:02:50,885 [http-nio-8080-exec-4] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:02:50,885 [http-nio-8080-exec-4] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String)
+2019-06-27 17:02:50,887 [http-nio-8080-exec-4] <==      Total: 1
+2019-06-27 17:02:50,888 [http-nio-8080-exec-4] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:02:50,888 [http-nio-8080-exec-4] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String), 20(Integer)
+2019-06-27 17:02:50,890 [http-nio-8080-exec-4] <==      Total: 20
+2019-06-27 17:02:53,844 [http-nio-8080-exec-1] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:02:53,844 [http-nio-8080-exec-1] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String)
+2019-06-27 17:02:53,845 [http-nio-8080-exec-1] <==      Total: 1
+2019-06-27 17:02:53,846 [http-nio-8080-exec-1] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:02:53,847 [http-nio-8080-exec-1] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String), 20(Integer)
+2019-06-27 17:02:53,849 [http-nio-8080-exec-1] <==      Total: 20
+2019-06-27 17:03:03,534 [http-nio-8080-exec-2] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:03:03,535 [http-nio-8080-exec-2] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String)
+2019-06-27 17:03:03,536 [http-nio-8080-exec-2] <==      Total: 1
+2019-06-27 17:03:03,537 [http-nio-8080-exec-2] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:03:03,538 [http-nio-8080-exec-2] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome2.exe(String), 20(Integer)
+2019-06-27 17:03:03,540 [http-nio-8080-exec-2] <==      Total: 20
+2019-06-27 17:03:08,943 [http-nio-8080-exec-3] ==>  Preparing: SELECT count(0) FROM tb_app_analysed t WHERE t.user_name = ? AND t.date = ? AND t.process_name = ? 
+2019-06-27 17:03:08,944 [http-nio-8080-exec-3] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String)
+2019-06-27 17:03:08,945 [http-nio-8080-exec-3] <==      Total: 1
+2019-06-27 17:03:08,946 [http-nio-8080-exec-3] ==>  Preparing: select * from tb_app_analysed t WHERE t.user_name = ? and t.date = ? and t.process_name =? LIMIT ? 
+2019-06-27 17:03:08,946 [http-nio-8080-exec-3] ==> Parameters: rzxiao(String), 2019-06-15(String), chrome.exe(String), 20(Integer)
+2019-06-27 17:03:08,948 [http-nio-8080-exec-3] <==      Total: 20

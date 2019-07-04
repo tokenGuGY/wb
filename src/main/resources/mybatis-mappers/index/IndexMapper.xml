@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.polygold.wb.dao.index.IndexDao">
+
+    <sql id="where">
+        <where>
+                and t.user_name = #{params.user_name}
+                and t.date = #{params.date}
+            <if test="params.process_name!=null and params.process_name!=''">
+                and t.process_name =#{params.process_name}
+            </if>
+        </where>
+    </sql>
+
+    <select id="chartList" resultType="PageData">
+        SELECT process_name,
+        SUM(TIMESTAMPDIFF(SECOND, start_time, end_time)) AS number
+        FROM tb_app_analysed
+        WHERE DATE=#{params.date} AND user_name =#{params.user_name}
+        GROUP BY  process_name
+    </select>
+
+
+    <select id="list" resultType="PageData">
+        select * from tb_app_analysed t
+        <include refid="where"></include>
+    </select>
+
+    <select id="chartLineList" resultType="PageData">
+        select *,IFNULL(TIME_TO_SEC(during_time),'0') AS duringSec,IFNULL(TIME_TO_SEC(idle_time),'0') AS idleSec
+        from tb_app_analysed t
+        WHERE DATE=#{params.date} AND user_name =#{params.user_name}
+    </select>
+
+    <select id="listUser" resultType="PageData">
+        SELECT DISTINCT(user_name) FROM tb_app_analysed;
+    </select>
+</mapper>

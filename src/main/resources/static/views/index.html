@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据可视化demo</title>
+    <link href="../styles/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/select/select2.min.css" />
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+    <!--<style>
+        .layui-table{
+            background: rgba(255, 255, 255, 0.2);
+            color:#fff;
+        }
+    </style>-->
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li class="nav_active"><i class="nav_1"></i><a href="index.html">主页</a></li>
+        </ul>
+    </div>
+    <div class="header_center left" style="position:relative">
+        <h2><strong>外包人员行为管理平台</strong></h2>
+
+    </div>
+    <div class="right nav text_right">
+        <ul>
+
+        </ul>
+    </div>
+
+</header>
+<!--内容部分-->
+<form class="layui-form" id="form" onsubmit="return false">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label"><span style="color: white">姓名</span></label>
+            <div class="layui-input-block">
+                <select  id="user_name" name="user_name"></select>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label"><span style="color: white">日期</span></label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="date" name="date" placeholder="yyyy-MM-dd">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <button class="layui-btn">查找</button>
+        </div>
+    </div>
+</form>
+<div class="con">
+    <!--统计分析图-->
+    <div class="div_any">
+        <div class="left div_any02">
+            <div class="div_any_child div_height">
+                <div class="div_any_title any_title_width"><img src="../images/title_17.png"
+                                                                style="padding-bottom: 10px;">应用使用情况
+                </div>
+                <div id="myChart"
+                     style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div>
+            </div>
+
+        </div>
+
+        <div class="left div_any02">
+            <div class="div_any_child div_height">
+                <div class="div_any_title any_title_width"><img src="../images/info_2.png"
+                                                                style="padding-bottom: 10px;">应用详细数据
+                </div>
+                <div style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%">
+                    <table id="dt-table" class="layui-hide"></table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="left div_any03">
+            <div class="div_any_child div_height">
+                <div class="div_any_title any_title_width"><img src="../images/info_2.png" style="padding-bottom: 10px;">当日工作状态
+                </div>
+                <div id="myChart1"
+                     style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../scripts/Plugin/echarts.min.js"></script>
+<script src="../scripts/common.js"></script>
+<script src="../scripts/Plugin/select/select2.min.js"></script>
+<script src="../scripts/index/index.js"></script>
+</html>
