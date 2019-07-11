@@ -18,16 +18,29 @@ public class IndexServiceImpl implements IndexService{
 
     @Autowired
     private IndexDao indexDao;
+    
+    
     /**
-     *
-     * @param pageData
-     * @return
+     * @description: TODO 获取列表
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:15 
      */
     @Override
     public List<PageData> list(PageData pageData) {
         return indexDao.list(pageData);
     }
 
+    /**
+     * @description: TODO 获取饼图数据
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:16 
+     */
     @Override
     public PageData chartData(PageData pageData) {
         List<PageData> list = indexDao.chartList(pageData);
@@ -52,6 +65,14 @@ public class IndexServiceImpl implements IndexService{
     }
 
 
+    /**
+     * @description: TODO  获取静默时间的折线图按数据显示
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:16 
+     */
     @Override
     public PageData chartLineData(PageData pageData) {
         List<PageData> list = indexDao.chartLineList(pageData);
@@ -117,6 +138,14 @@ public class IndexServiceImpl implements IndexService{
     }
 
 
+    /**
+     * @description: TODO 获取静默时间的折线图按秒显示
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:18 
+     */
     @Override
     public PageData chartLineDataSecond(PageData pageData) throws  Exception{
         List<PageData> list = indexDao.chartLineList(pageData);
@@ -180,11 +209,27 @@ public class IndexServiceImpl implements IndexService{
         return pageData;
     }
 
+    /**
+     * @description: TODO 用户的数据
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:20 
+     */
     @Override
     public List<PageData> listUser(PageData pageData) {
         return indexDao.listUser(pageData);
     }
 
+    /**
+     * @description: TODO 获取在线的用户的状态
+     * @param pageData
+     * @return
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:20 
+     */
     @Override
     public List<PageData> listOnLineUser(PageData pageData) {
         return  indexDao.listOnLine(pageData);

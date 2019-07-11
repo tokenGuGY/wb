@@ -111,7 +111,7 @@ layui.use(['form', 'laydate', 'table'], function () {
                         {
                             name: '来源',
                             type: 'pie',
-                            radius: '65%',
+                            radius: '60%',
                             center: ['50%', '60%'],
                             data: seriesData,
                             itemStyle: {

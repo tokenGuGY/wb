@@ -20,7 +20,16 @@ public class IndexController {
 
     @Autowired
     private IndexService indexService;
-
+  
+    
+    /**
+     * @description: TODO 获取用户的总体情况(饼图)
+     * @param pageData
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:11 
+     */
     @PostMapping("/chartsList")
     public BaseResponse getChartsData(@RequestBody PageData pageData){
         BaseResponse response;
@@ -29,8 +38,15 @@ public class IndexController {
         return response;
 
     }
-
-
+    
+    /**
+     * @description: TODO 用户的详细信息
+     * @param pageData 
+     * @return list
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:12 
+     */
     @PostMapping("/getListData")
     public BaseResponse getData(@RequestBody PageData pageData){
         BaseResponse response;
@@ -43,7 +59,15 @@ public class IndexController {
         response = new BaseResponse(StatusCode.Success.getCode(),StatusCode.Success.getMsg(),recordsTotal,list);
         return  response;
     }
-
+    
+    /**
+     * @description: TODO 获取静默时间折线图
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:12 
+     */
     @PostMapping("/chartsLineList")
     public BaseResponse chartsLineList(@RequestBody PageData pageData)throws Exception{
         BaseResponse response;
@@ -53,6 +77,14 @@ public class IndexController {
 
     }
 
+    /**
+     * @description: TODO 获取有数据的用户
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:13 
+     */
     @PostMapping("/listUser")
     public BaseResponse listUser(@RequestBody PageData pageData){
         BaseResponse response;
@@ -62,7 +94,14 @@ public class IndexController {
 
     }
 
-
+    /**
+     * @description: TODO 获取在线用户的状态
+     * @param pageData 
+     * @return 
+     * @throws
+     * @author guguangyu
+     * @date 2019/7/11 17:14 
+     */
     @PostMapping("/onLineUserList")
     public BaseResponse getOnLineListUserData(@RequestBody PageData pageData){
         BaseResponse response;
